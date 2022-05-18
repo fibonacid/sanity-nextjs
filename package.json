@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "cd studio && yarn install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "studio": "cd studio && yarn start",
+    "prod-build": "cd studio && cd studio && yarn install && yarn sanity build ../public/studio -y && cd .. && next build"
   },
   "dependencies": {
     "next": "12.1.6",
